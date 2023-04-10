@@ -1,0 +1,163 @@
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body>
+    <div class="all">
+        <div class="nav">
+            <div class="left">
+                <div class="logo">
+                <img src="rec" alt="">
+                </div>
+            </div>
+            <div class="middle">
+                
+                    <input class="search-input"type="text">
+                <button class="search-button" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                </div>
+    
+                
+            <div class="right">
+                <div class="search-popup nav-button">
+                    <i class="search fa fa-search"></i>
+                </div>
+                <div class="upload nav-button">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+    
+                <div class="settings nav-button">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+    
+            
+    
+            </div>
+        </div>
+        <div class="line"></div>
+       </div>
+
+<section class="content">
+    <div class="sidebar open">
+        <div class="logo-details">
+            <div class="logo_name">Hey,Name</div>
+            <div><i class=' fa fa-arrow-left-from-line' id="btn" ></i></div>
+        </div>
+        <ul class="nav-list">
+            <li class="item">
+              <a href="#">
+                <i class="fa-regular fa-folder mobicon"></i>
+                <span class="links_name">Folder</span>
+              </a>
+               <span class="tooltip">Folder</span>
+            </li>
+            <li class="item">
+             <a href="#">
+              <i class="fa-light fa-stars mobicon"></i>
+               <span class="links_name">Favrorites</span>
+             </a>
+             <span class="tooltip">Favrorites</span>
+           </li>
+           <li class="item">
+             <a href="#">
+              <i class="fa-regular fa-calendar-days mobicon"></i>
+               <span class="links_name">Recent</span>
+             </a>
+             <span class="tooltip">Recent</span>
+           </li>
+           <li class="item">
+             <a href="#">
+              <i class="fa-regular fa-trash mobicon"></i>
+               <span class="links_name">Trash</span>
+             </a>
+             <span class="tooltip">Trash</span>
+           </li>
+          </ul>
+        
+      </div>
+      <section class="home-section">
+          
+        <div class="table">
+  <div class="table-element">
+    <div class="table-top">
+      <div class="file-name">Censurry.img</div>
+      <div class="option">
+        <i class="fa-solid fa-ellipsis-vertical option-button"></i>
+      </div>
+    </div>
+    <hr class="table-hr">
+    <div class="frame">
+      <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_960_720.jpg" alt="">
+      
+    </div>
+  </div>
+  <div class="table-element">
+    <div class="table-top">
+      <div class="file-name">Censurry.img</div>
+      <div class="option">
+        <i class="fa-solid fa-ellipsis-vertical option-button"></i>
+      </div>
+    </div>
+    <hr class="table-hr">
+    <div class="frame">
+      <img src="https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_960_720.jpg" alt="">
+      
+    </div>
+  </div>
+  <div class="table-element">
+
+
+    
+  </div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  <div class="table-element"></div>
+  
+        </div>
+          
+      </section>
+</section>
+
+<script>
+
+let middle = document.querySelector(".middle");
+  let search_button = document.querySelector(".search");
+
+  search_button.addEventListener("click", ()=>{
+    middle.classList.toggle("toggle");
+    
+  });
+
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+ 
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("fa-arrow-right-from-line", "fa-arrow-left-from-line");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("fa-arrow-left-from-line", "fa-arrow-right-from-line");//replacing the iocns class
+   }
+  }
+</script>
+   </body>
